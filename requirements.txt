@@ -1,0 +1,5 @@
+# ERA AI — Phase 0 + Phase 1 dependencies
+PySide6>=6.6
+requests>=2.31
+PyYAML>=6.0
+psutil>=5.9

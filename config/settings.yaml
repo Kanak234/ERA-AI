@@ -1,0 +1,45 @@
+# ============================================================
+# ERA AI — settings
+# Single source of truth. Machine-specific overrides go in .env
+# ============================================================
+
+app:
+  name: "ERA AI"
+  subtitle: "Emergent Reasoning Architecture"
+  owner: "Kanak Prabhakar"
+  language: "en"          # en | hi
+  theme: "dark"           # dark | light
+
+ollama:
+  host: "http://localhost:11434"
+  request_timeout: 300    # seconds
+  default_keep_alive: "5m"
+
+# Hardware-aware model management (see spec Section 23)
+models:
+  # On 16 GB RAM keep this at 1. The wizard can auto-tune it.
+  max_hot_models: 1
+  ram_safety_margin_mb: 2048
+  allow_true_parallel: false   # auto-false on low RAM
+
+routing:
+  auto_route: true         # ERA picks the worker automatically
+  use_llm_judge: false     # Tier-2 (phi4-mini) judge for hard cases
+  judge_model_id: "worker-1"
+
+generation:
+  temperature: 0.7
+  max_tokens: 2048
+
+privacy:
+  local_only_mode: true    # block non-local network calls
+  log_conversation_content: false
+
+paths:
+  # All relative to the app root -> portable instance folder
+  data_dir: "instance"
+  conversations_dir: "conversations"
+  memory_dir: "memory"
+  recordings_dir: "recordings"
+  logs_dir: "logs"
+  exports_dir: "exports"

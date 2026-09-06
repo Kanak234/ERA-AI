@@ -1,0 +1,58 @@
+{
+  "workers": [
+    {
+      "id": "worker-1",
+      "label": "Phi-4 Mini",
+      "ollama_tag": "phi4-mini:latest",
+      "provider": "Microsoft",
+      "license": "verify-from-metadata",
+      "runtime": "ollama",
+      "specialties": ["fast", "summarize", "classify", "short", "chat"],
+      "approx_ram_gb": 3,
+      "enabled": true,
+      "system_prompt_file": "models/NEED-1/prompts/system.txt"
+    },
+    {
+      "id": "worker-2",
+      "label": "DeepSeek-R1 7B",
+      "ollama_tag": "deepseek-r1:7b",
+      "provider": "DeepSeek",
+      "license": "verify-from-metadata",
+      "runtime": "ollama",
+      "specialties": ["reasoning", "math", "planning", "analysis"],
+      "approx_ram_gb": 6,
+      "enabled": true,
+      "system_prompt_file": "models/NEED-2/prompts/system.txt"
+    },
+    {
+      "id": "worker-3",
+      "label": "Qwen3-Coder",
+      "ollama_tag": "qwen3-coder:latest",
+      "provider": "Qwen (Alibaba)",
+      "license": "verify-from-metadata",
+      "runtime": "ollama",
+      "specialties": ["code", "debug", "architecture", "terminal", "repo"],
+      "approx_ram_gb": 8,
+      "enabled": true,
+      "system_prompt_file": "models/NEED-3/prompts/system.txt"
+    },
+    {
+      "id": "worker-4",
+      "label": "Llama 3.1 8B",
+      "ollama_tag": "llama3.1:8b",
+      "provider": "Meta",
+      "license": "verify-from-metadata",
+      "runtime": "ollama",
+      "specialties": ["general", "writing", "knowledge", "conversation", "rewrite"],
+      "approx_ram_gb": 6,
+      "enabled": true,
+      "system_prompt_file": "models/NEED-4/prompts/system.txt"
+    }
+  ],
+  "identity": {
+    "name": "ERA AI",
+    "full_name": "ERA — Emergent Reasoning Architecture",
+    "creator": "Kanak Prabhakar",
+    "who_created_answer": "ERA AI is a personal AI system created and engineered by Kanak Prabhakar. It combines multiple locally hosted foundation models through a custom orchestration, routing, memory and evaluation architecture. It does not claim to have originally created the underlying foundation models."
+  }
+}
